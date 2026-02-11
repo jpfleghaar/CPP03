@@ -6,7 +6,7 @@
 /*   By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 13:53:56 by jenne             #+#    #+#             */
-/*   Updated: 2026/02/10 13:44:33 by jenne            ###   ########.fr       */
+/*   Updated: 2026/02/11 13:03:23 by jenne            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,34 +98,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 }
 
-// unsigned int ClapTrap::getRandomNum(void)
-// {
-//     static std::random_device rd;
-//     static std::mt19937 gen(rd());
-//     std::uniform_int_distribution<> dist(0, 10);
-//     unsigned int num = dist(gen);
-//     return (num);
-// }
-
-
-// void ClapTrap::palyTheGame(const std::string& enemy)
-// {
-//         while (this->_hitPoints > 0 && this->_energy > 0)
-//         {
-//         this->attack(enemy);
-//         unsigned int damage = getRandomNum();
-//         takeDamage(damage);
-//         unsigned int heal = getRandomNum();
-//         this->beRepaired(heal);
-//         if(this->_hitPoints <= 0)
-//         {
-//             std::cout << "\033[33mour hero is dead!" << "\033[0m" << std::endl;
-//             return ;
-//         }
-//         else if (this->_energy <= 0)
-//         {
-//             std::cout << "\033[33mOur hero has no energy left" <<  "\033[0m" <<std::endl;
-//             return ;
-//         }
-//     }
-// }
+int ClapTrap::getHitPoints() const
+{
+    return(_hitPoints);
+}
+int ClapTrap::getEnergy() const
+{
+    return(_energy);
+}

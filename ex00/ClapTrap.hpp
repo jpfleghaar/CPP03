@@ -6,7 +6,7 @@
 /*   By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 13:31:13 by jpfleghaar        #+#    #+#             */
-/*   Updated: 2026/02/10 13:23:19 by jenne            ###   ########.fr       */
+/*   Updated: 2026/02/11 12:55:19 by jenne            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ class ClapTrap
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-        unsigned int getRandomNum(void);
-        void palyTheGame(const std::string& enemy);
+        int getHitPoints() const;
+        int getEnergy() const;
+
 };
 
 
