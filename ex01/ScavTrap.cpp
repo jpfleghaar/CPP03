@@ -6,7 +6,7 @@
 /*   By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:01:49 by jenne             #+#    #+#             */
-/*   Updated: 2026/02/11 14:51:18 by jenne            ###   ########.fr       */
+/*   Updated: 2026/02/11 15:05:11 by jenne            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-    _energy = 100;
-    _hitPoints = 50;
+    _energy = 50;
+    _hitPoints = 100;
     _damage = 20;
     std::cout << "\033[34mScavTrap Default Constructor called" << "\033[0m" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-    _energy = 100;
-    _hitPoints = 50;
+    _energy = 50;
+    _hitPoints = 100;
     _damage = 20;
     std::cout << "\033[34mScavTrap " << _name << " is in the game!" << "\033[0m"<< std::endl;
 }
@@ -52,7 +52,7 @@ void ScavTrap::attack(const std::string& target)
     {
         this->_energy--;
         std::cout << "\033[33mScavTrap " <<  _name << " was attacked from! " << target 
-        << " Energy: " << _energy << "\033[0m" << std::endl;
+        << " Energy: " << this->_energy << "\033[0m" << std::endl;
     }
     else if(this->_hitPoints <= 0)
     {
