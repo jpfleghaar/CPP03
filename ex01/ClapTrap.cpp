@@ -6,7 +6,7 @@
 /*   By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 13:53:56 by jenne             #+#    #+#             */
-/*   Updated: 2026/02/11 13:03:23 by jenne            ###   ########.fr       */
+/*   Updated: 2026/02/11 14:51:41 by jenne            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,13 @@ void ClapTrap::attack(const std::string& target)
 {
     if(this->_energy > 0 && this->_hitPoints > 0)
     {
-        std::cout << "\033[33m" <<  _name << " was attacked from! " << target << "\033[0m" << std::endl;
         this->_energy--;
+        std::cout << "\033[33mClapTrap " <<  _name << " was attacked from! " << target 
+        << " Energy: " << _energy<< "\033[0m" << std::endl;
     }
     else if(this->_hitPoints <= 0)
     {
-        std::cout << "\033[31mYou can not attack, YOU ARE DEAD!" << "\033[0m" << std::endl;
+        std::cout << "\033[31mYou can not attack, ClapTrap is DEAD!" << "\033[0m" << std::endl;
     }
     else 
     {
@@ -82,14 +83,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_energy > 0 && this->_hitPoints > 0)
     {
-        this->_hitPoints += amount;
-        if (this->_hitPoints > 10)
-        this->_hitPoints = 10;
-        
+        this->_hitPoints += amount;        
         this->_energy--;
         
         std::cout << "\033[32m" << this->_name << " repaired to "
-        << this->_hitPoints << " HP" <<  "\033[0m" << std::endl;
+        << this->_hitPoints << " HP" << " Energy: " << _energy << "\033[0m" << std::endl;
     }
     else
     {

@@ -6,7 +6,7 @@
 /*   By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 13:31:13 by jpfleghaar        #+#    #+#             */
-/*   Updated: 2026/02/11 12:55:19 by jenne            ###   ########.fr       */
+/*   Updated: 2026/02/11 14:09:47 by jenne            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string _name;
         unsigned int _energy;
         unsigned int _hitPoints;
