@@ -6,11 +6,11 @@
 #    By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/07 13:26:34 by jenne             #+#    #+#              #
-#    Updated: 2026/02/11 14:02:20 by jenne            ###   ########.fr        #
+#    Updated: 2026/02/11 15:12:42 by jenne            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++17
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
