@@ -6,14 +6,14 @@
 #    By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/07 13:26:34 by jenne             #+#    #+#              #
-#    Updated: 2026/02/11 14:02:20 by jenne            ###   ########.fr        #
+#    Updated: 2026/02/11 15:13:39 by jenne            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = FragTrap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++17
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean fclean re

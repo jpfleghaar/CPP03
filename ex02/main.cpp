@@ -6,12 +6,13 @@
 /*   By: jenne <jpflegha@student.42heilbronn.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 14:21:05 by jenne             #+#    #+#             */
-/*   Updated: 2026/02/11 15:06:01 by jenne            ###   ########.fr       */
+/*   Updated: 2026/02/11 15:27:49 by jenne            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 unsigned int getRandomNum10()
 {
@@ -52,6 +53,31 @@ void playClapTrap(ClapTrap& hero, const std::string& enemy)
         }
     }
 }
+void playFragTrap(FragTrap& hero, const std::string& enemy)
+{
+    while (hero.getHitPoints() > 0 && hero.getEnergy() > 0)
+    {
+        hero.attack(enemy);
+
+        unsigned int damage = getRandomNum100();
+        hero.takeDamage(damage);
+
+        unsigned int heal = getRandomNum100();
+        hero.beRepaired(heal);
+
+        if (hero.getHitPoints() <= 0)
+        {
+            std::cout << "\033[33mOur ScavTrap is dead!\033[0m\n";
+            return;
+        }
+        else if (hero.getEnergy() <= 0)
+        {
+            std::cout << "\033[33mOur ScavTrap has no energy left\033[0m\n";
+            return;
+        }
+    }
+}
+
 void playScavTrap(ScavTrap& hero, const std::string& enemy)
 {
     while (hero.getHitPoints() > 0 && hero.getEnergy() > 0)
@@ -77,16 +103,20 @@ void playScavTrap(ScavTrap& hero, const std::string& enemy)
     }
 }
 
+
 int main (void)
 {
     ClapTrap a("Bob");
     ScavTrap b("harald");
+    FragTrap c("Felix");
 
   
     std::cout << "ClapTrap Testing\n" << std::endl;
     playClapTrap(a, "harl");
     std::cout << "\nScavTrap Testing\n" << std::endl;
     playScavTrap(b, "thomas");
-    b.guardGate();
+    std::cout << "\nFragTrap Testing\n" << std::endl;
+    playFragTrap(c, "Alex");
+    c.highFivesGuys();
     return (0);
 }
