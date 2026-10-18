@@ -15,7 +15,8 @@
 
 #include <iostream>
 #include <string>
-#include <random>
+#include <cstdlib>
+#include <ctime>
 
 class ClapTrap
 {

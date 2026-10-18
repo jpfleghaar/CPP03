@@ -12,12 +12,21 @@
 
 #include "ClapTrap.hpp"
 
+static void seedRandom()
+{
+    static bool seeded = false;
+
+    if (!seeded)
+    {
+        std::srand(static_cast<unsigned int>(std::time(NULL)));
+        seeded = true;
+    }
+}
+
 unsigned int getRandomNum()
 {
-    static std::random_device rd;
-    static std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dist(0, 10);
-    return dist(gen);
+    seedRandom();
+    return std::rand() % 11;
 }
 
 void playTheGame(ClapTrap& hero, const std::string& enemy)
