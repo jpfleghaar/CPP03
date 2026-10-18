@@ -1,6 +1,6 @@
 # C++ Module 03 — Inheritance
 
-A small robot "game" in C++98 to practise inheritance: `ClapTrap` → `ScavTrap` / `FragTrap` → `DiamondTrap`.
+A small robot "game" in C++ to practise inheritance: `ClapTrap` → `ScavTrap` / `FragTrap` → `DiamondTrap`.
 
 *This project was created as part of the 42 curriculum by jpflegha.*
 
@@ -38,7 +38,7 @@ Bob took 7 damage, HP: 3
 Bob repaired to 9 HP: 9 Energy: 8
 ```
 
-Program names: `ex00/ClapTrap`, `ex01/ScavTrap`, `ex02/FragTrap`, `ex03/DiamondTrap`. Each exercise has its own Makefile (`c++ -Wall -Wextra -Werror -std=c++98`).
+Program names: `ex00/ClapTrap`, `ex01/ScavTrap`, `ex02/FragTrap`, `ex03/DiamondTrap`. Each exercise has its own Makefile (`c++ -Wall -Wextra -Werror -std=c++17`).
 
 ## Project structure
 
